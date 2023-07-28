@@ -1,0 +1,736 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f9f6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.342) 0%), url(https://img.buzzfeed.com/buzzfeed-static/complex/images/Y19jcm9wLGhfMTAzNix3XzE3MjYseF81MTgseV8xNTAw/ybtntge6o4wbye5ugqaa/tiffany-and-co-nike-air-force-1-1837-tiffany-blue-6.jpg?output-format=jpg&output-quality=auto);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+header .topHeader {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+header .topHeader .rightt {
+  display: flex;
+}
+header .topHeader .rightt .busket i {
+  font-size: 25px;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: #5fedf1;
+}
+header .topHeader .rightt #hidden {
+  display: none;
+}
+header .topHeader .rightt #hidden i {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 25px;
+  color: #5fedf1;
+}
+header .topHeader .left {
+  width: 40%;
+}
+header .topHeader .left input {
+  width: 40%;
+  background-color: transparent;
+  outline: none;
+  border: 1.5px solid #5fedf1 !important;
+  border-radius: 3px;
+  opacity: 80%;
+  padding: 7px;
+  padding-left: 10px;
+  color: #5fedf1;
+}
+header .topHeader .left input::-moz-placeholder {
+  color: #5fedf1;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 100%;
+}
+header .topHeader .left input::placeholder {
+  color: #5fedf1;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 100%;
+}
+header .topHeader .middle {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .topHeader .middle img {
+  width: 100px;
+  height: 22px;
+}
+header .topHeader .middle a {
+  text-decoration: none;
+  color: #5fedf1;
+  font-weight: 700;
+  font-size: 27px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+}
+header .topHeader .right {
+  margin-right: 5px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 40%;
+  gap: 15px;
+}
+header .topHeader .right .hidden {
+  display: none;
+}
+header .topHeader .right a {
+  color: #5fedf1;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+header .topHeader .right a:hover {
+  scale: 1.1;
+}
+header .topHeader .right i {
+  color: #60b6d8;
+  font-size: 25px;
+  transition: 0.5s;
+}
+header .topHeader .right i:hover {
+  scale: 1.1;
+}
+header .basket {
+  position: absolute;
+  position: fixed;
+  top: 60px;
+  right: -300px;
+  width: 300px;
+  height: 600px;
+  overflow: auto;
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #B5FFFC 0%, #B5FFFC 100%);
+  transition: 0.7s ease-in-out;
+  z-index: 50;
+}
+header .basket .basket-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .basket .basket-cards hr {
+  width: 70%;
+  border-color: 1px solid white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+header .basket .basket-cards .basket-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  padding: 10px;
+}
+header .basket .basket-cards .basket-card .img {
+  width: 40%;
+}
+header .basket .basket-cards .basket-card .img img {
+  width: 100%;
+}
+header .basket .basket-cards .basket-card .aboutCard {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+header .basket .basket-cards .basket-card .aboutCard p {
+  margin-left: 5px;
+}
+header .basket .basket-cards .basket-card .remove {
+  margin-top: 10px;
+}
+header .basket .basket-cards .basket-card .remove p {
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+header .elmir {
+  right: 0;
+}
+header .burger {
+  padding: 10px;
+  width: 150px;
+  background-color: white;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  position: fixed;
+  top: 60px;
+  right: -300px;
+  width: 300px;
+  height: 400px;
+  overflow: auto;
+  transition: 0.7s ease-in-out;
+  z-index: 50;
+}
+header .burger a {
+  color: #5fedf1;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+header .burger hr {
+  margin-bottom: 30px;
+  align-self: center;
+  border: 1px solid black;
+  width: 70%;
+}
+header .burger2 {
+  display: none;
+  right: 0;
+}
+header .text {
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+header .text .textContent {
+  color: white;
+}
+header .text .textContent p {
+  width: 40%;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+header .text .textContent a {
+  margin-left: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+.headerWhite {
+  background: white;
+  transition: 0.3s;
+}
+
+#new {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#new .container .new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#new .container .new a {
+  transition: 0.5s;
+}
+#new .container .new a h1 {
+  margin-bottom: 20px;
+}
+#new .container .new a:hover {
+  color: #5fedf1;
+}
+#new .container .new .cards1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+}
+#new .container .new .cards1 .card {
+  overflow: hidden;
+  background: white;
+  padding: 0px 20px 80px 20px;
+  width: 24%;
+}
+#new .container .new .cards1 .card .img {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+#new .container .new .cards1 .card .img img {
+  width: 100%;
+  transition: 0.5s;
+}
+#new .container .new .cards1 .card .brand {
+  height: 10%;
+  margin-bottom: 5px;
+}
+#new .container .new .cards1 .card .brand a {
+  color: gray;
+  font-size: 15px;
+}
+#new .container .new .cards1 .card .model {
+  width: 100%;
+  height: 30%;
+}
+#new .container .new .cards1 .card .model a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+#new .container .new .cards1 .card button {
+  margin: 10px 0;
+  padding: 5px;
+  background: transparent;
+  border: 1px solid black;
+  font-weight: 600;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#new .container .new .cards1 .card button:hover {
+  background: #5fedf1;
+  color: black;
+  border: 1px solid black;
+}
+#new .container .new .cards1 .card:hover img {
+  scale: 0.9;
+  rotate: 20deg;
+}
+#new .container .new .button1 {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  font-weight: 700;
+}
+
+#apparel {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+#apparel .container .apparel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#apparel .container .apparel a {
+  transition: 0.5s;
+}
+#apparel .container .apparel a h1 {
+  margin-bottom: 20px;
+}
+#apparel .container .apparel a:hover {
+  color: #5fedf1;
+}
+#apparel .container .apparel .cards2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+}
+#apparel .container .apparel .cards2 .card {
+  overflow: hidden;
+  background: white;
+  padding: 0px 20px 80px 20px;
+  width: 24%;
+}
+#apparel .container .apparel .cards2 .card .img {
+  margin-bottom: 10px;
+}
+#apparel .container .apparel .cards2 .card .img img {
+  width: 100%;
+  transition: 0.5s;
+}
+#apparel .container .apparel .cards2 .card .brand {
+  margin-bottom: 5px;
+}
+#apparel .container .apparel .cards2 .card .brand a {
+  color: gray;
+  font-size: 15px;
+}
+#apparel .container .apparel .cards2 .card .model {
+  height: 30%;
+  width: 100%;
+}
+#apparel .container .apparel .cards2 .card .model a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+#apparel .container .apparel .cards2 .card button {
+  margin: 10px 0;
+  padding: 5px;
+  background: transparent;
+  border: 1px solid black;
+  font-weight: 600;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#apparel .container .apparel .cards2 .card button:hover {
+  background: #5fedf1;
+  color: black;
+  border: 1px solid black;
+}
+#apparel .container .apparel .cards2 .card:hover img {
+  scale: 1.1;
+}
+#apparel .container .apparel .button2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  font-weight: 700;
+}
+
+#slides {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+#slides .container .slides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#slides .container .slides a {
+  transition: 0.5s;
+}
+#slides .container .slides a h1 {
+  margin-bottom: 20px;
+}
+#slides .container .slides a:hover {
+  color: #5fedf1;
+}
+#slides .container .slides .cards3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+}
+#slides .container .slides .cards3 .card {
+  overflow: hidden;
+  background: white;
+  padding: 0px 20px 80px 20px;
+  width: 24%;
+}
+#slides .container .slides .cards3 .card .img {
+  margin-bottom: 10px;
+}
+#slides .container .slides .cards3 .card .img img {
+  width: 100%;
+  transition: 0.5s;
+}
+#slides .container .slides .cards3 .card .brand {
+  margin-bottom: 5px;
+}
+#slides .container .slides .cards3 .card .brand a {
+  color: gray;
+  font-size: 15px;
+}
+#slides .container .slides .cards3 .card .model {
+  width: 100%;
+  height: 30%;
+}
+#slides .container .slides .cards3 .card .model a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+#slides .container .slides .cards3 .card button {
+  margin: 10px 0;
+  padding: 5px;
+  background: transparent;
+  border: 1px solid black;
+  font-weight: 600;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#slides .container .slides .cards3 .card button:hover {
+  background: #5fedf1;
+  color: black;
+  border: 1px solid black;
+}
+#slides .container .slides .cards3 .card:hover img {
+  rotate: 20deg;
+  scale: 0.9;
+}
+#slides .container .button3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+  .headerWhite2 {
+    background: white;
+    transition: 0.2s;
+  }
+  header {
+    height: 10vh;
+  }
+  header .topHeader {
+    display: flex;
+    padding: 10px;
+  }
+  header .topHeader .rightt {
+    gap: 5px;
+  }
+  header .topHeader .rightt #hidden {
+    display: block;
+    margin-left: 0px;
+  }
+  header .topHeader .rightt .busket {
+    margin-bottom: 10px;
+    margin-bottom: 5px;
+  }
+  header .topHeader .left {
+    display: none;
+  }
+  header .topHeader .middle {
+    justify-content: start;
+    width: 50%;
+  }
+  header .topHeader .middle a {
+    font-size: 20px;
+  }
+  header .topHeader .right {
+    display: none;
+  }
+  header .burger2 {
+    padding: 10px;
+    width: 150px;
+    background-color: white;
+    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+  header .burger2 a {
+    color: #5fedf1;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  header .burger2 hr {
+    margin-bottom: 30px;
+    align-self: center;
+    border: 1px solid black;
+    width: 70%;
+  }
+  #new .container {
+    width: 95%;
+  }
+  #new .container .new .cards1 {
+    justify-content: center;
+  }
+  #new .container .new .cards1 .card {
+    padding: 20px;
+    width: 45%;
+  }
+  #new .container .new .cards1 .card .model {
+    height: 20% !important;
+  }
+  #new .container .new .cards1 .card a {
+    font-size: 15px;
+  }
+  #new .container .new .cards1 .card button {
+    margin-top: 90px;
+    margin-bottom: 0px;
+  }
+  #apparel .container {
+    width: 95%;
+  }
+  #apparel .container .apparel .cards2 {
+    justify-content: center;
+  }
+  #apparel .container .apparel .cards2 .card {
+    padding: 20px;
+    width: 45%;
+  }
+  #apparel .container .apparel .cards2 .card .model {
+    height: 20% !important;
+  }
+  #apparel .container .apparel .cards2 .card a {
+    font-size: 15px;
+  }
+  #apparel .container .apparel .cards2 .card button {
+    margin-top: 70px;
+    margin-bottom: 0px;
+  }
+  #slides .container {
+    width: 95%;
+  }
+  #slides .container .slides .cards3 {
+    justify-content: center;
+  }
+  #slides .container .slides .cards3 .card {
+    padding: 20px;
+    width: 45%;
+  }
+  #slides .container .slides .cards3 .card .model {
+    height: 20% !important;
+  }
+  #slides .container .slides .cards3 .card a {
+    font-size: 15px;
+  }
+  #slides .container .slides .cards3 .card button {
+    margin-top: 70px;
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .headerWhite2 {
+    background: white;
+    transition: 0.2s;
+  }
+  header {
+    height: 35vh !important;
+  }
+  header .topHeader {
+    display: flex;
+    padding: 10px;
+  }
+  header .topHeader .rightt {
+    gap: 10px;
+  }
+  header .topHeader .rightt #hidden {
+    display: block;
+    margin-left: 0px;
+  }
+  header .topHeader .rightt .busket {
+    margin-bottom: 20px;
+    margin-bottom: 5px;
+  }
+  header .topHeader .left {
+    display: none;
+  }
+  header .topHeader .middle {
+    justify-content: start;
+    width: 50%;
+  }
+  header .topHeader .middle a {
+    font-size: 20px;
+  }
+  header .topHeader .right {
+    display: none;
+  }
+  header .burger2 {
+    padding: 10px;
+    width: 150px;
+    background-color: white;
+    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+  header .burger2 a {
+    color: #5fedf1;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  header .burger2 hr {
+    margin-bottom: 30px;
+    align-self: center;
+    border: 1px solid black;
+    width: 70%;
+  }
+  #new .container {
+    width: 95%;
+  }
+  #new .container .new .cards1 {
+    justify-content: center;
+  }
+  #new .container .new .cards1 .card {
+    padding: 20px;
+    width: 45%;
+  }
+  #new .container .new .cards1 .card .model {
+    height: 5% !important;
+  }
+  #new .container .new .cards1 .card .model {
+    height: 10%;
+  }
+  #new .container .new .cards1 .card a {
+    font-size: 15px;
+  }
+  #new .container .new .cards1 .card button {
+    margin-top: 70px;
+    margin-bottom: 0px;
+  }
+  #apparel .container {
+    width: 95%;
+  }
+  #apparel .container .apparel .cards2 {
+    justify-content: center;
+  }
+  #apparel .container .apparel .cards2 .card {
+    padding: 20px;
+    width: 45%;
+  }
+  #apparel .container .apparel .cards2 .card .model {
+    height: 5% !important;
+  }
+  #apparel .container .apparel .cards2 .card a {
+    font-size: 15px;
+  }
+  #apparel .container .apparel .cards2 .card button {
+    margin-top: 70px;
+    margin-bottom: 0px;
+  }
+  #slides .container {
+    width: 95%;
+  }
+  #slides .container .slides .cards3 {
+    justify-content: center;
+  }
+  #slides .container .slides .cards3 .card {
+    padding: 20px;
+    width: 45%;
+  }
+  #slides .container .slides .cards3 .card model {
+    height: 5% !important;
+  }
+  #slides .container .slides .cards3 .card a {
+    font-size: 15px;
+  }
+  #slides .container .slides .cards3 .card button {
+    margin-top: 70px;
+    margin-bottom: 0px;
+  }
+}/*# sourceMappingURL=style.css.map */
